@@ -197,10 +197,6 @@ main {
   background-color: var(--Hover-red);
 }
 
-.bar:hover + .floating {
-  display: unset;
-}
-
 .today-bar:hover {
   cursor: pointer;
   background-color: var(--Hover-cyan);
