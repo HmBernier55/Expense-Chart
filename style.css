@@ -149,10 +149,6 @@ main {
   left: 0.333rem;
 }
 
-.hidden {
-  display: none;
-}
-
 /*----------------------------------- Chart ---------------------------------------*/
 #data__graph {
   display: grid;
