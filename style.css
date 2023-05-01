@@ -1,0 +1,291 @@
+:root {
+  --Soft-red: hsl(10, 79%, 65%);
+  --Hover-red: hsl(10, 100%, 76%);
+  --Hover-cyan: hsl(186, 49%, 80%);
+  --Cyan: hsl(186, 34%, 60%);
+  --Dark-brown: hsl(25, 47%, 15%);
+  --Medium-brown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+  --Pale-orange: hsl(33, 100%, 98%);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+}
+
+body {
+  background-color: var(--Cream);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+main {
+  width: 90vw;
+  max-width: 30rem;
+  min-width: 19.06rem;
+}
+
+.flex-grid {
+  display: flex;
+}
+
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------- FIRST SECTION --------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+.balance {
+  background-color: var(--Soft-red);
+  justify-content: space-between;
+  align-items: center;
+  height: 5.389rem;
+  border-radius: 0.55rem;
+  color: var(--Pale-orange);
+}
+
+@media (min-width: 33.33rem) {
+  .balance {
+    height: 6.94rem;
+  }
+}
+
+.balance__amount,
+.balance__icon {
+  margin: 0 1.33rem;
+}
+
+.balance__icon img {
+  width: 3.33rem;
+  height: 2.22rem;
+}
+
+@media (min-width: 33.33rem) {
+  .balance__amount,
+  .balance__icon {
+    margin: 0 2.22rem;
+  }
+
+  .balance__icon img {
+    width: unset;
+    height: unset;
+  }
+}
+
+.balance__amount--text {
+  font-size: 0.833rem;
+  margin-bottom: 0.22rem;
+}
+
+.balance__amount--money {
+  font-weight: 700;
+  font-size: 1.33rem;
+}
+
+@media (min-width: 33.33rem) {
+  .balance__amount--text {
+    font-size: 1rem;
+    margin-bottom: 0.44rem;
+  }
+
+  .balance__amount--money {
+    font-size: 1.778rem;
+  }
+}
+
+/*-------------------------------------------------------------------------------*/
+/*------------------------------- SECOND SECTION --------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+.data {
+  position: relative;
+  flex-direction: column;
+  background-color: var(--Pale-orange);
+  margin-top: 0.889rem;
+  border-radius: 0.55rem;
+  padding: 1.33rem 1.11rem;
+}
+
+@media (min-width: 33.33rem) {
+  .data {
+    padding: 1.778rem 2.222rem;
+  }
+}
+
+.data__subtitle {
+  font-weight: 700;
+  font-size: 1.33rem;
+  color: var(--Dark-brown);
+}
+
+@media (min-width: 33.33rem) {
+  .data__subtitle {
+    font-size: 1.778rem;
+  }
+}
+
+.floating {
+  display: none;
+  position: absolute;
+  background-color: var(--Dark-brown);
+  width: 3.94rem;
+  height: 2.22rem;
+  border-radius: 0.278rem;
+  top: 0;
+  left: 0;
+}
+
+#floating__amount {
+  position: relative;
+  color: var(--Pale-orange);
+  font-size: 1rem;
+  font-weight: 700;
+  top: 0.444rem;
+  left: 0.333rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/*----------------------------------- Chart ---------------------------------------*/
+#data__graph {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 8rem 0.889rem;
+  gap: 0.611rem 0.611rem;
+  width: 100%;
+  height: 9.833rem;
+  margin-top: 2.88rem;
+  margin-bottom: 1.33rem;
+  align-items: end;
+}
+
+@media (min-width: 33.33rem) {
+  #data__graph {
+    gap: 0.444rem 1rem;
+    margin-top: 3.667rem;
+    margin-bottom: 1.778rem;
+  }
+}
+
+#data__graph > p {
+  color: var(--Medium-brown);
+  font-size: 0.667rem;
+  place-self: center;
+}
+
+.bar {
+  background-color: var(--Soft-red);
+  border-radius: 0.167rem;
+  width: 100%;
+}
+
+.today-bar {
+  background-color: var(--Cyan);
+  border-radius: 0.167rem;
+  width: 100%;
+}
+
+.bar-transition {
+  transition: height 0.5s ease-in-out;
+}
+
+.bar:hover {
+  cursor: pointer;
+  background-color: var(--Hover-red);
+}
+
+.bar:hover + .floating {
+  display: unset;
+}
+
+.today-bar:hover {
+  cursor: pointer;
+  background-color: var(--Hover-cyan);
+}
+
+#mon,
+#tues,
+#wed,
+#thur,
+#fri,
+#sat,
+#sun {
+  height: 0%;
+}
+
+/*---------------------------------- Line Break --------------------------------------*/
+hr {
+  opacity: 0.2;
+  margin-bottom: 1.33rem;
+}
+
+@media (min-width: 33.33rem) {
+  hr {
+    margin-bottom: 1.778rem;
+  }
+}
+
+/* -------------------------------- Bottom section --------------------------------------*/
+.data-subsection {
+  justify-content: space-between;
+}
+
+.data-subsection__amount--text {
+  font-size: 0.833rem;
+  color: var(--Medium-brown);
+}
+
+@media (min-width: 33.33rem) {
+  .data-subsection__amount--text {
+    font-size: 1rem;
+  }
+}
+
+.data-subsection__amount--money {
+  font-size: 1.667rem;
+  font-weight: 700;
+  color: var(--Dark-brown);
+}
+
+@media (min-width: 33.33rem) {
+  .data-subsection__amount--money {
+    font-size: 2.667rem;
+  }
+}
+
+.data-subsection__percent {
+  flex-direction: column;
+  justify-content: end;
+}
+
+.data-subsection__percent--number {
+  font-size: 0.833rem;
+  font-weight: 700;
+  align-self: end;
+  color: var(--Dark-brown);
+}
+
+@media (min-width: 33.33rem) {
+  .data-subsection__percent--number {
+    font-size: 1rem;
+  }
+}
+
+.data-subsection__percent--text {
+  font-size: 0.833rem;
+  font-weight: 400;
+  color: var(--Medium-brown);
+}
+
+@media (min-width: 33.33rem) {
+  .data-subsection__percent--text {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Expenses chart component</title>
+  </head>
+  <body>
+    <main>
+      <section class="flex-grid balance">
+        <div class="balance__amount">
+          <p class="balance__amount--text">My balance</p>
+          <p class="balance__amount--money">$921.48</p>
+        </div>
+        <div class="balance__icon">
+          <img src="./images/logo.svg" alt="bank logo" />
+        </div>
+      </section>
+
+      <section class="flex-grid data">
+        <h2 class="data__subtitle">Spending - Last 7 days</h2>
+        <div class="floating">
+          <span id="floating__amount">$20.00</span>
+        </div>
+        <div id="data__graph">
+          <div id="mon" class="bar bar-transition"></div>
+          <div id="tues" class="bar bar-transition"></div>
+          <div id="wed" class="bar bar-transition"></div>
+          <div id="thur" class="bar bar-transition"></div>
+          <div id="fri" class="bar bar-transition"></div>
+          <div id="sat" class="bar bar-transition"></div>
+          <div id="sun" class="bar bar-transition"></div>
+
+          <p>mon</p>
+          <p>tue</p>
+          <p>wed</p>
+          <p>thu</p>
+          <p>fri</p>
+          <p>sat</p>
+          <p>sun</p>
+        </div>
+        <hr />
+        <div class="data-subsection flex-grid">
+          <div class="data-subsection__amount">
+            <p class="data-subsection__amount--text">Total this month</p>
+            <p class="data-subsection__amount--money">$478.33</p>
+          </div>
+          <div class="data-subsection__percent flex-grid">
+            <p class="data-subsection__percent--number">+2.4%</p>
+            <p class="data-subsection__percent--text">from last month</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
