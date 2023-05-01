@@ -4,6 +4,8 @@
 
 ## **_Webpage Screenshot:_**
 
+![App Screenshot](./images/App-Screenshot.jpg)
+
 ## **_Description:_**
 
 My interpretation of a [Frontend Mentor](https://www.frontendmentor.io/home) Challenge
